@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no">
+    <title>UtopaXR</title>
+    <script>
+      console.log(document.documentElement.clientHeight,78787877)
+  　　let html = document.documentElement;
+      let clientHeight_xu = document.documentElement.clientHeight;
+      if(clientHeight_xu<568){
+        window.rem = html.getBoundingClientRect().width / 28;
+  　　  html.style.fontSize = window.rem + 'px';
+      }else if(clientHeight_xu>=568&&clientHeight_xu<667){
+        window.rem = html.getBoundingClientRect().width / 27;
+  　　  html.style.fontSize = window.rem + 'px';
+      }else{
+        window.rem = html.getBoundingClientRect().width / 25;
+  　　  html.style.fontSize = window.rem + 'px';
+      }
+    </script>
+    <script>
+      // (function (doc, win) {
+      //   var docEl = doc.documentElement;
+      //   resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+      //   recalc = function () {
+      //       var clientWidth = docEl.clientWidth;
+      //       if (!clientWidth) return;
+      //       docEl.style.fontSize = 50 * (clientWidth / 375) + 'px';
+      //   };
+      //   if (!doc.addEventListener) return;
+      //   win.addEventListener(resizeEvt, recalc, false);
+      //   doc.addEventListener('DOMContentLoaded', recalc, false);
+      // }(document,window));
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
